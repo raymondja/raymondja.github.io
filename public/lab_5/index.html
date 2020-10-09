@@ -7,7 +7,7 @@
     </head>
     <!--CITATION: https://webdesign.tutsplus.com/tutorials/building-responsive-forms-with-flexbox--cms-26767-->
     <body>
-        <h1>Raymond Argueta's Lab 4</h1>
+        <h1>Raymond Argueta's Lab 5</h1>
     <div class="container">
         <form action="/api" method="post">
         <ul class="flex-outer">
@@ -54,7 +54,7 @@
         </ul>
         </form>
         
-      
+    <script>
     const btn = document.querySelector('button');
     const head1 = document.querySelector('h1');
     const fruit = document.querySelector(".checkbox-list-label");
@@ -71,8 +71,8 @@
            console.log(response);
         })
         document.body.style.backgroundColor = "#0080ff";
-        pageTitle.innerHTML = "Ryan Mullen, Lab 5";
-        head1.innerHTML = "Lab 5 for Ryan Mullen";
+        pageTitle.innerHTML = "Raymond Argueta, Lab 5";
+        head1.innerHTML = "Lab 5 for Raymond Argueta";
         head1.style.fontFamily = "Cinzel Decorative";
         
         flexOut.style = "Margin: 0px auto;";
@@ -92,8 +92,8 @@
     }
 
       function submission(){
-        let a = document.getElementById("fname").value;
-        let b = document.getElementById("lname").value;
+        let a = document.getElementById("first-name").value;
+        let b = document.getElementById("last-name").value;
         let c = document.getElementById("email").value;
         let d = document.getElementById("phone").value;
         let e = document.getElementById("message").value;
@@ -103,6 +103,7 @@
         console.log(d);
         console.log(e);
       }
+      </script>
     </div>
     </body>
 </html>
