@@ -5,6 +5,7 @@
         <title>Raymond Argueta's Lab 4</title>
         <link rel="stylesheet" href="style.css">
     </head>
+    <!--CITATION: https://webdesign.tutsplus.com/tutorials/building-responsive-forms-with-flexbox--cms-26767-->
     <body>
         <h1>Raymond Argueta's Lab 4</h1>
     <div class="container">
@@ -52,6 +53,56 @@
             </li>
         </ul>
         </form>
+        
+      
+    const btn = document.querySelector('button');
+    const head1 = document.querySelector('h1');
+    const fruit = document.querySelector(".checkbox-list-label");
+    const flexOut = document.querySelector(".flex-outer");
+    const bigFruit = document.querySelectorAll(".flex-inner label");
+    const fruitArr = Array.from(bigFruit);
+    const pageTitle = document.querySelector('title');
+    /* move stuff to Activate function */
+    /* or just keep it here, who cares*/
+      function testFunction() {
+        fetch('/api')
+        .then((response) => response.text())
+        .then((response) => {
+           console.log(response);
+        })
+        document.body.style.backgroundColor = "#0080ff";
+        pageTitle.innerHTML = "Ryan Mullen, Lab 5";
+        head1.innerHTML = "Lab 5 for Ryan Mullen";
+        head1.style.fontFamily = "Cinzel Decorative";
+        
+        flexOut.style = "Margin: 0px auto;";
+        flexOut.style.marginRight = "101.75px";
+        flexOut.style.marginLeft = flexOut.style.marginRight;
+        
+        
+        fruit.innerHTML = "Fruits";
+
+        fruitArr.forEach(fruit => {
+          fruitArr[0].innerHTML = "Watermelon";
+          fruitArr[1].innerHTML = "Honeydew";
+          fruitArr[2].innerHTML = "Durian";
+        });
+
+
+    }
+
+      function submission(){
+        let a = document.getElementById("fname").value;
+        let b = document.getElementById("lname").value;
+        let c = document.getElementById("email").value;
+        let d = document.getElementById("phone").value;
+        let e = document.getElementById("message").value;
+        console.log(a);
+        console.log(b);
+        console.log(c);
+        console.log(d);
+        console.log(e);
+      }
     </div>
     </body>
 </html>
