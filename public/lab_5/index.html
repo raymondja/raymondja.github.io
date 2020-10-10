@@ -49,7 +49,8 @@
             </ul>
             </li>
             <li>
-             <button type="submit">Submit Here</button> 
+             <button class="button" onclick="submission()" type="submit" id="button" name="button">Submit Application Here</button> 
+             <button class="button2" onclick="testFunction()" type="button" id="button2" name="button_2">Activate</button>
             </li>
         </ul>
         </form>
@@ -63,14 +64,13 @@
     const fruitArr = Array.from(bigFruit);
     const pageTitle = document.querySelector('title');
     /* move stuff to Activate function */
-    /* or just keep it here, who cares*/
       function testFunction() {
         fetch('/api')
         .then((response) => response.text())
         .then((response) => {
            console.log(response);
         })
-        document.body.style.backgroundColor = "#0080ff";
+        document.body.style.backgroundColor = "#0047AB";
         pageTitle.innerHTML = "Raymond Argueta, Lab 5";
         head1.innerHTML = "Lab 5 for Raymond Argueta";
         head1.style.fontFamily = "Cinzel Decorative";
