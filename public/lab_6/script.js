@@ -57,7 +57,7 @@ document.body.addEventListener('submit', async (e) => {
         $(list).append(li);
       });
 
-      console.log('fromServer', fromServer);
+      //console.log('fromServer', fromServer);
     })
   .catch((err) => console.log(err));
 });
