@@ -59,5 +59,5 @@ document.body.addEventListener('submit', async (e) => {
 
       //console.log('fromServer', fromServer);
     })
-  //.catch((err) => console.log(err));
+  .catch((err) => console.log(err));
 });
