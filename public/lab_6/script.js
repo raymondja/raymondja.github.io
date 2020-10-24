@@ -36,6 +36,27 @@ document.body.addEventListener('submit', async (e) => {
     .then((fromServer) => fromServer.json())
     .then((fromServer) => {
       // You're going to do your lab work in here. Replace this comment.
+      if (document.querySelector('.flex-inner')) {
+        document.querySelector('.flex-inner').remove();
+      }
+      const newArr = range(10);
+      const countryList = newArr.map(() => {
+        const num = randomize(244);
+        return fromServer[num];
+      });
+
+      const reversal = countryList.sort((a, b) => sortByKey(b, a, 'name'));
+      const list = document.createElement('ul');
+      list.className = 'flex-inner';
+      $('form').prepend(list);
+
+      reversal.forEach((element, i) => {
+        const li = document.createElement('li');
+        $(list).append(`<input type="checkbox" value=${element.code} id=${element.code} />`);
+        $(list).append(`<label for=${element.code}>${element.name}</label>`);
+        $(list).append(li);
+      });
+
       console.log('fromServer', fromServer);
     })
     .catch((err) => console.log(err));
