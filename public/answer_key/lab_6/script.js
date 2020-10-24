@@ -58,5 +58,5 @@ document.body.addEventListener('submit', async (e) => {
         $(list).append(li);
       });
     })
-  // .catch((err) => console.log(err));
+   .catch((err) => console.log(err));
 });
