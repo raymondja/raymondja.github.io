@@ -17,6 +17,12 @@ function sortByKey(first, last, key) {
   return 0;
 }
 
+function randomize(max) {
+  const num = Math.floor(Math.random() * Math.floor(max));
+  // console.log(num);
+  return num;
+}
+
 document.body.addEventListener('submit', async (e) => {
   e.preventDefault(); // this stops whatever the browser wanted to do itself.
   const form = $(e.target).serializeArray(); // here we're using jQuery to serialize the form
