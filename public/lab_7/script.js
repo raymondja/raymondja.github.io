@@ -47,19 +47,19 @@ function makeYourOptionsObject(datapointsFromRestaurantsList) {
         customBreaks: [{
           startValue: 40,
           endValue: 50,
-          color: 'yellow',
+          color: 'blue',
           type: 'zigzag'
         },
         {
           startValue: 85,
           endValue: 100,
-          color: 'yellow',
+          color: 'blue',
           type: 'zigzag'
         },
         {
           startValue: 140,
           endValue: 175,
-          color: 'yellow',
+          color: 'blue',
           type: 'zigzag'
         }
         ]
