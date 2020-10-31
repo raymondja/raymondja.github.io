@@ -1,24 +1,24 @@
 function convertRestaurantsToCategories(restaurantList) {
   // process your restaurants here!
-  const carr = [];
-  const end = {};
+  const catg = [];
+  const ans = {};
   for (let i = 0; i < restaurantList.length; i += 1) {
-    carr.push(restaurantList[i].category);
+    catg.push(restaurantList[i].category);
   }
-  for (let i = 0; i < carr.length; i += 1) {
-    if (!end[carr[i]]) {
-    end[carr[i]] = 0; 
+  for (let i = 0; i < catg.length; i += 1) {
+    if (!ans[catg[i]]) {
+    ans[catg[i]] = 0; 
     }
-    end[carr[i]] += 1;
+    ans[catg[i]] += 1;
   }
 
-  const list = Object.keys(end).map((category) => ({
-    y: end[category],
+  const replist = Object.keys(ans).map((category) => ({
+    y: ans[category],
     label: category
   }));
 
-  console.log('reply', list);
-return list;
+  console.log('reply', replist);
+return replist;
 }
 
 function makeYourOptionsObject(datapointsFromRestaurantsList) {
