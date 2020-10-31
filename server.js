@@ -1,10 +1,10 @@
 // These are our required libraries to make the server work.
 /* eslint-disable no-console */
 /* eslint-disable no-unused-vars */
+import fetch from 'node-fetch';
 import express from 'express';
 import dotenv from 'dotenv';
 //import countries from './public/lab_6/countries.js';
-import fetch from 'node-fetch';
 
 dotenv.config();
 
@@ -21,18 +21,31 @@ app.use((req, res, next) => {
   next();
 });
 
-app.route('/api')
-  .get(async (req, res) => {
-    console.log('GET request detected');
+// app.route('/api')
+//  .get(async (req, res) => {
+//    console.log('GET request detected');
     //res.send(`Lab 5 for ${process.env.NAME}`);
-    const data = await fetch ('https://data.princegeorgescountymd.gov/resource/umjn-t2iz.json');
-    console.log('fetch request data', data);
-  })
-  .post(async (req, res) => {
-    console.log('POST request detected');
-    res.json('Hello World');
-  });
+//    const data = await fetch ('https://data.princegeorgescountymd.gov/resource/umjn-t2iz.json');
+//    console.log('fetch request data', data);
+//  }) 
+  app.route('/api')   
+    .get(async(req, res) => {     
+      console.log('GET request detected');     
+      console.log('fetch request data', data);   
+    })    
+    
+    .post(async(req, res) => {     
+      console.log('POST request detected');     
+      const data = await fetch('https://data.princegeorgescountymd.gov/resource/umjn-t2iz.json%27');     
+      const json = await data.json();     
+      res.json(json);   
+    });
+
+// .post(async (req, res) => {
+//   console.log('POST request detected');
+//   res.json('Hello World');
+// });
   
-app.listen(port, () => {
+ app.listen(port, () => {
   console.log(`Example app listening on port ${port}!`);
 });
