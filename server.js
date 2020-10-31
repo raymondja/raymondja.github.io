@@ -24,7 +24,7 @@ app.use((req, res, next) => {
 app.route('/api')
   .get((req, res) => {
     console.log('GET request detected');
-    res.send(`Lab 5 for ${process.env.NAME}`);
+    //res.send(`Lab 5 for ${process.env.NAME}`);
     const data = await fetch ('https://data.princegeorgescountymd.gov/resource/umjn-t2iz.json');
     console.log('fetch request data', data);
   })
